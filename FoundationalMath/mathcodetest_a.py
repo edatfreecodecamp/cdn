@@ -74,7 +74,7 @@ def step07(code):
 
 def step08(answer):
     print(" ")
-    if answer==8:
+    if answer == 8:
         print("Code test passed")
         print("Go on to the next step")
     else:
@@ -117,7 +117,7 @@ def step12(code):
     print(" ")
     if re.search("if test\_number\:", code):
         print("Now change the if statement")
-    elif re.search("if number\s*\%\s*test\_number\=\=0\:", code):
+    elif re.search("if number\s*\%\s*test\_number\s*\=\=\s*0\:", code):
         print("Code test passed")
         print("Go on to the next step")
     else:
@@ -127,7 +127,7 @@ def step12(code):
 def step13(code):
     import re
     print(" ")
-    if re.search("print\(1\/n\)", code):
+    if re.search("print\(1\s*\/\s*n\)", code):
         print("Code test passed")
         print("Go on to the next step")
     else:
@@ -177,8 +177,7 @@ def step17(code):
 def step18(code):
     import re
     print(" ")
-    code_count=0
-    code = In[-1].split('# Only change code above this line')[0];
+    code_count = 0
 
     # if n % (maybe_factor**2) == 0:
     if re.search("if n\s*\%\s*\(maybe\_factor\*\*2\)\s*\=\=\s*0\:", code):
@@ -192,7 +191,7 @@ def step18(code):
     else:
         print("Your code should include max_factor = maybe_factor")
 
-    if code_count==2:
+    if code_count == 2:
         print("Code test passed")
         print("Go on to the next step")
 
@@ -209,45 +208,44 @@ def step21(code):
     import re
     print(" ")
     code_count = 0
-    code = In[-1].split('# Only change code above this line')[0];
     if re.search("print\(round\(a\,\s*\-6\)", code):
         code_count = code_count + 1
     else:
-        print("Your code should inlcude 'print(round(a,-6)'")
-     
+        print("Your code should include 'print(round(a,-6)'")
+
     if re.search("print\(round\(b\,\s*3\)", code):
         code_count = code_count + 1
     else:
-        print("Your code should inlcude 'print(round(b,3)'")
+        print("Your code should include 'print(round(b,3)'")
 
     if code_count == 2:
         print("Code test passed")
         print("Go on to the next step")
 
 
-def step22():
+def step22(n, numerator, denominator, percent, exponent):
     print(" ")
     # one solution
     numerator2 = int(n*10**exponent)
     denominator2 = 10**exponent
     percent2 = n*100
     code_count = 0
-    if numerator2==numerator:
+    if numerator2 == numerator:
         code_count = code_count + 1
     else:
         print("You should use numerator = int(n*10**exponent) in your code")
 
-    if denominator2==denominator:
+    if denominator2 == denominator:
         code_count = code_count + 1
     else:
         print("You should use denominator = 10**exponent in your code")
 
-    if percent2==percent:
+    if percent2 == percent:
         code_count = code_count + 1
     else:
         print("You should use percent = n*100 in your code")
 
-    if code_count==3:
+    if code_count == 3:
         print("Code test passed")
         print("Go on to the next step")
 
@@ -255,7 +253,7 @@ def step22():
 def step23(code):
     import re
     print(" ")
-	code_count = 0
+    code_count = 0
     if re.search("def say\_something\(\)\:", code):
         print("Now change the name of the function")
     elif re.search("def fun\(\)\:", code):
@@ -270,7 +268,7 @@ def step23(code):
     else:
         print("Remember to call the function fun() in your code")
 
-    if code_count==2:
+    if code_count == 2:
         print("Code test passed")
         print("Go on to the next step")
 
@@ -293,7 +291,7 @@ def step24(code):
     else:
         print("Your code should include greeting(nombre)")
 
-    if code_count==2:
+    if code_count == 2:
         print("Code test passed")
         print("You can go on to the next step")
 
@@ -323,11 +321,25 @@ def step25(code):
     else:
         print("Your code should include sum = a + b + c")
 
-    if code_count==3:
+    if code_count == 3:
         print("Code test passed")
         print("You can go on to the next step")
 
 
-// test for step 26?
-// test for step 27?
-// probably add 3 more steps
+def step26(code):
+    import re
+    print(" ")
+    code_count = 0
+    if re.search("return number\*2", code):
+        print("Now change the return statement in the function")
+    elif re.search("return number\*3", code):
+        print("Code test passed")
+        print("You can go on to the next step")
+    else:
+        print("Your code should include return number*3")
+
+
+def step27(code):
+    print("If you didn't get a syntax error, you are ready for the project")
+
+# I will probably add 3 more steps
